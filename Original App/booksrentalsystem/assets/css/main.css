@@ -1,0 +1,58 @@
+* {
+	margin: 0px; /* Standardize margin as each browser have different value set */
+	padding: 0px; /* Standardize padding as each browser have different value set */
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background: #eeeeee;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	cursor: default; /*context-menu*/
+}
+
+label { font-weight: bold; }
+
+input,
+select,
+button { font-size: 16px; }
+
+.btn {
+	cursor: pointer;
+	border-radius: 20px;
+	border: 2px solid #232323;
+	padding: 5px 15px;
+	background-color: transparent;
+}
+
+input[type="text"],
+select {
+	outline: none;
+	border-radius: 10px;
+	border-color: #cc9500;
+	border: 1px solid #cc9500;
+}
+
+select { text-align-last: center; }
+
+input[type="text"]:focus,
+select:focus {
+	border: 2px solid #cc9500;
+}
+
+input[type="submit"]:hover,
+button:hover { background-color: #fb0; }
+
+input[type="submit"]:focus,
+button:focus { outline: none; }
+
+input[type="submit"]:active,
+button:active { background-color: #cc9500; } 
+
+.content {
+	width: 100%;
+	height: 100%;
+}
