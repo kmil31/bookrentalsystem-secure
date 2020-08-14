@@ -28,6 +28,6 @@ Having one level of authorization is quite vulnerable, as if the credentials are
 * **Password stored in plaintext**
 Previous username and passwords were not encrypted and was stored in plaintext file.
 
-##Objective for Enhancement
+## Objective for Enhancement
 
 To fix the previously stated vulnerabilities as well as making our web application more secure in general, as is recommended practise.
