@@ -166,7 +166,12 @@ $(document).ready(function() {
 				phone : phone
 			},
 			success : function(data, textStatus) {
-				alert("New member successfully registered with ID = " + data);
+				if (data === "EmptyMember"){
+					alert("Input is not valid");
+				}
+				else{
+					alert("New member successfully registered with ID = " + data);
+				}
 			},
 			error : function(textStatus) {
 				alert("Registration failed due to database issue.");
@@ -262,7 +267,12 @@ $(document).ready(function() {
 				author : author
 			},
 			success : function(data, textStatus) {
-				alert("New book successfully added with ID = " + data);
+				if (data === "Empty"){
+					alert("Input is not valid");
+				}
+				else{
+					alert("New book successfully added with ID = " + data);
+				}
 			},
 			error : function(textStatus) {
 				alert("Add book failed due to database issue.");
