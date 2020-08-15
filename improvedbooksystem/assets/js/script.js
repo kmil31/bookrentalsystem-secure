@@ -157,7 +157,7 @@ $(document).ready(function() {
 
 		var name = $("#name").val();
 		var phone = $("#phone").val();
-		if(name.match(/[^0-9a-zA-Z\s]/g || []).length===0){
+		if (((name.match(/[^0-9a-zA-Z\s]/g)||[]).length)===0) {
 		$.ajax({
 			type : $(this).attr("method"), // post request
 			url : "../../RegisterMembershipServlet",
