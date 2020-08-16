@@ -63,4 +63,4 @@ Our website implements a 60 second timeout for a user session, if there is no ac
 * https://stackoverflow.com/questions/6649677/cleaning-the-string-in-java
 * https://happycoding.io/tutorials/java-server/sanitizing-user-input
 * https://www.rexegg.com/
-* https://jsoup.org/
+* https://jsoup.org/download
