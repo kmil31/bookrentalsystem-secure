@@ -43,3 +43,24 @@ Another authorization level of administrator was added to the system instead of 
 
 * **Hashing Password**
 Hashing algorithm is added to the password the user of the application used to login into. The password stored in this hashed version to make the value unreadable in case of being hacked. The login module will convert the password input from user into predetermined hash algorithm before conducting match checking with users' login info in the database.
+
+* **XSS And CSRF Prevention**
+The vulnerable input fields are the name fields of our register membership page and the title and author fields of the add books page. We prevent the XSS attack by firstly, not reflecting the user input back to the user, to prevent the reflected XSS attack, and secondly, by doing input sanitisation both at the client-side and server-side by using javascript regular expressions as well as Jsoup library to clean the input fields and prevent unwanted input.All are queries are not done by URL,
+and we have used jQuery's AJAX to POST our requests to servlets.Since we have tried to prevent XSS, the probability of CSRF is also low.
+
+* **Database Security**
+We have tried to prevent SQL injection by firstly disabling special characters in our input fields, as well as checking the input both client-side and server side. We have used parameterized queries by implementing the prepared statement methods provided by Java. This will hopefully make SQL injection a bit more difficult to perform, and will secure our database.
+
+* **File Security**
+Most of our business logic is compiled into servlets, with the jsp pages only displaying the input forms and necessary information. Our business logic is purely server-side Javascript and servlets, making extracting the source code difficult as most of it is compiled. 
+
+* **Session Security**
+Our website implements a 60 second timeout for a user session, if there is no activity within 60 seconds after your last action, the server will automatically log you out and destroy your session cookie. The server only provides access to a user if they are given a session cookie after login. This makes directly typing in the pages of the website in your URL not work, as navigating to those pages will simply redirect back to the login screen.
+
+
+## References
+
+* https://stackoverflow.com/questions/6649677/cleaning-the-string-in-java
+* https://happycoding.io/tutorials/java-server/sanitizing-user-input
+* https://www.rexegg.com/
+* https://jsoup.org/
